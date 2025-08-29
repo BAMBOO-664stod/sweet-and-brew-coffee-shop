@@ -1,39 +1,152 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Landing Page</title>
+  <title>Sweet & Brew – Coffee & Art Desserts</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      text-align: center;
       margin: 0;
-      padding: 0;
-      background: #f9fafb;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
     }
     header {
-      background: #2563eb;
-      color: white;
-      padding: 2rem;
+      background: #fff;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background: #2563eb;
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: auto;
+    }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(to right, #ffe6e6, #fff5f5);
+    }
+    .hero h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+    .btn {
+      background: #e63946;
+      color: #fff;
+      padding: 15px 30px;
       border: none;
-      border-radius: 5px;
-      color: white;
-      font-size: 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1.1em;
+      display: inline-block;
+      margin-top: 20px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .about, .signup {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+    .signup form {
+      margin-top: 20px;
+    }
+    input[type="email"] {
+      padding: 10px;
+      width: 70%;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+    }
+    input[type="submit"] {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      background: #e63946;
+      color: #fff;
+      font-size: 1em;
+      margin-left: 10px;
       cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      background: #333;
+      color: #fff;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    @media(max-width:600px) {
+      .hero h1 {font-size: 2em;}
+      input[type="email"] {width: 100%; margin-bottom: 10px;}
+      input[type="submit"] {width: 100%; margin-left: 0;}
     }
   </style>
 </head>
-<body>
-  <header>
-    <h1>Welcome to My Landing Page</h1>
-    <p>This is my free site hosted on GitHub Pages 🚀</p>
-    <button>Call to Action</button>
-  </header>
-</body>
+<body>  <!-- Navigation -->  <header>
+    <nav>
+      <div class="logo"><strong>Sweet & Brew</strong></div>
+      <div>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#support">Support</a>
+        <a href="#signup">Sign Up</a>
+      </div>
+    </nav>
+  </header>  <!-- Hero Section -->  <section class="hero">
+    <h1>Sweet & Brew – Coffee & Art Desserts</h1>
+    <p>We are a family from Ukraine who moved to Warsaw after the war!<br>
+       We want to make goodies for people and bring joy with every dessert.</p>
+    <a href="https://www.kickstarter.com/projects/1520747482/sweet-and-brew-coffee-shop-and-art-desserts-in-makarska?ref=android_project_share" class="btn" target="_blank">Support us on Kickstarter</a>
+  </section>  <!-- Gallery -->  <section id="gallery" class="gallery">
+    <img src="image1.jpg" alt="Delicious dessert">
+    <img src="image2.jpg" alt="Coffee art">
+    <img src="image3.jpg" alt="Family baking">
+    <img src="image4.jpg" alt="Cafe vibes">
+  </section>  <!-- About -->  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>
+      We are passionate about coffee, sweets, and creating a warm community space. 
+      Our dream is to build a coffee shop and art dessert cafe where people can 
+      enjoy delicious flavors and support a story of resilience and hope. 
+      Join us on this journey and help make our project a reality!
+    </p>
+  </section>  <!-- Signup -->  <section id="signup" class="signup">
+    <h2>Join Our Mailing List</h2>
+    <p>Sign up for our mailing list to receive updates and sweet news!</p>
+    <form action="https://formspree.io/f/xjkeybbw" method="POST">
+      <input type="email" name="email" placeholder="Enter your email" required>
+      <input type="submit" value="Sign Up">
+    </form>
+  </section>  <!-- Support -->  <section id="support" class="about">
+    <h2>Support Our Project</h2>
+    <p>
+      Every pledge brings us closer to opening our Sweet & Brew Coffee Shop and 
+      Art Desserts cafe. Your support means the world to us!
+    </p>
+    <a href="https://www.kickstarter.com/projects/1520747482/sweet-and-brew-coffee-shop-and-art-desserts-in-makarska?ref=android_project_share" class="btn" target="_blank">Support us on Kickstarter</a>
+  </section>  <!-- Footer -->  <footer>
+    <p>&copy; 2025 Sweet & Brew | Made with ❤️ for our community</p>
+  </footer></body>
 </html>
